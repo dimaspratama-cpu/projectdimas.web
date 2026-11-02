@@ -1,0 +1,533 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #0284c7;
+    outline-offset: 2px;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===== HEADER & NAV ===== */
+.header {
+    background-color: #0f172a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 8px 22px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover {
+    color: #38bdf8;
+}
+
+.nav-linkedin {
+    border: 1px solid #38bdf8;
+    border-radius: 6px;
+    padding: 4px 12px;
+}
+
+/* ===== HERO ===== */
+.hero {
+    background-color: #0f172a;
+    color: white;
+    padding: 90px 0;
+}
+
+.hero-content {
+    max-width: 760px;
+}
+
+.subtitle {
+    color: #38bdf8;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.hero h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.hero-role {
+    font-size: 22px;
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.hero-desc {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    display: inline-block;
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 12px 25px;
+    border: 2px solid #38bdf8;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn:hover {
+    background-color: #0f172a;
+    color: #38bdf8;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #0284c7;
+    border-color: #0284c7;
+}
+
+.btn-outline:hover {
+    background-color: #0284c7;
+    color: white;
+}
+
+.btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* ===== LAYOUT: CONTENT + ASIDE (FLEXBOX) ===== */
+.layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+#content {
+    flex: 1;
+    min-width: 0;
+}
+
+.sidebar {
+    flex: 0 0 280px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 95px;
+}
+
+.sidebar img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid #38bdf8;
+    margin-bottom: 18px;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.profile-list {
+    list-style: none;
+}
+
+.profile-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+.profile-list strong {
+    color: #0284c7;
+}
+
+/* ===== CONTENT BLOCKS ===== */
+.block {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    margin-bottom: 25px;
+}
+
+.block p {
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-size: 28px;
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
+.block h3 {
+    color: #0284c7;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.meta {
+    color: #475569;
+    font-size: 14px;
+}
+
+/* Riwayat pendidikan = urutan, jadi pakai garis waktu */
+.timeline {
+    list-style: none;
+    border-left: 3px solid #38bdf8;
+    padding-left: 22px;
+}
+
+.timeline li {
+    margin-bottom: 18px;
+}
+
+.timeline li:last-child {
+    margin-bottom: 0;
+}
+
+.check-list {
+    margin: 15px 0 0 20px;
+}
+
+.check-list li {
+    margin-bottom: 6px;
+}
+
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    flex: 1 1 200px;
+    background-color: #eaf4fb;
+    padding: 18px;
+    border-radius: 10px;
+    border-left: 4px solid #0284c7;
+}
+
+/* ===== HALAMAN PHP: FORM, PENCARIAN, PESAN ===== */
+.page {
+    padding: 50px 0 70px;
+    min-height: 70vh;
+}
+
+.page h1 {
+    font-size: 34px;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.page-intro {
+    color: #475569;
+    margin-bottom: 25px;
+}
+
+.form-box {
+    max-width: 640px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea,
+.search-form input,
+.search-form select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #94a3b8;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.alert {
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.alert ul {
+    margin: 6px 0 0 20px;
+}
+
+.alert-error {
+    background-color: #fef2f2;
+    border: 1px solid #dc2626;
+    color: #991b1b;
+}
+
+.alert-success {
+    background-color: #f0fdf4;
+    border: 1px solid #16a34a;
+    color: #166534;
+}
+
+.alert-info {
+    background-color: #eff6ff;
+    border: 1px solid #2563eb;
+    color: #1e40af;
+}
+
+.result-box {
+    max-width: 640px;
+    background-color: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.result-box dt {
+    font-weight: bold;
+    color: #0284c7;
+    margin-top: 12px;
+}
+
+.result-box dd {
+    white-space: pre-line;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.search-form input {
+    flex: 2 1 240px;
+    width: auto;
+}
+
+.search-form select {
+    flex: 1 1 160px;
+    width: auto;
+}
+
+.result-list {
+    list-style: none;
+}
+
+.result-item {
+    background-color: white;
+    padding: 22px 25px;
+    border-radius: 12px;
+    border-left: 5px solid #0284c7;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    margin-bottom: 16px;
+}
+
+.result-item h2 {
+    font-size: 20px;
+    color: #0f172a;
+}
+
+.result-item .meta {
+    margin: 2px 0 8px;
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.pagination a,
+.pagination span {
+    padding: 8px 14px;
+    border: 1px solid #0284c7;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #0284c7;
+}
+
+.pagination .aktif {
+    background-color: #0284c7;
+    color: white;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .sidebar {
+        flex: none;
+        width: 100%;
+        position: static;
+        order: -1;
+    }
+
+    .sidebar img {
+        max-width: 260px;
+        height: 300px;
+        margin: 0 auto 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .navbar {
+        justify-content: center;
+        padding: 15px 0;
+    }
+
+    .nav-menu {
+        justify-content: center;
+        gap: 8px 16px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .block,
+    .form-box {
+        padding: 22px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-menu a {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero-role {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .page h1 {
+        font-size: 27px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .btn,
+    .nav-menu a {
+        transition: none;
+    }
+}
